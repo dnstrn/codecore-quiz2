@@ -1,0 +1,16 @@
+<h1>Support Requests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Message</th>
+    <th>Actions</th>
+  </tr>
+  <% @request.each do |request| %>
+  <tr>
+    <td><%= link_to request.id, requests_path(request) %></td>
+  </tr>
+  <% end %>
+</table>
