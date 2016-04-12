@@ -10,7 +10,9 @@
   </tr>
   <% @request.each do |request| %>
   <tr>
-    <td><%= link_to request.id, requests_path(request) %></td>
+    <td><%= link_to request.name, requests_path(request) %></td>
+    <td><%= mail_to request.email %>
+    <td><%= request.message %>
   </tr>
   <% end %>
 </table>

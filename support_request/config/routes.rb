@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get   '/requests/new'   => 'requests#new', as: :new_request
   post  '/requests'       => 'requests#create'
   get   '/requests'       => 'requests#index'
+  get   '/requests/:id'   => 'requests#show', as: :request
+  get   '/requests/edit'  => 'requests#edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

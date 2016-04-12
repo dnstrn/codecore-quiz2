@@ -4,7 +4,8 @@ class CreateRequests < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :department
-      t.text :message
+      t.text   :message
+      t.text   :actions
 
       t.timestamps null: false
     end

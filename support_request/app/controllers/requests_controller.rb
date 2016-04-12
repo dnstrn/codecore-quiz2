@@ -9,7 +9,7 @@ class RequestsController < ApplicationController
     @request = Request.new(request_params)
 
     if @request.save
-      redirect_to request_path(@request)
+      redirect_to requests_path(@request)
     else
       render :new
     end
